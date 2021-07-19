@@ -14,7 +14,74 @@ workflows:
         - xcodebuild_test_options: '-parallel-testing-enabled'
         - simulator_os_version: '14.5'
         - output_tool: xcodebuild
-    - deploy-to-bitrise-io@1: {}
+    - deploy-to-bitrise-io@1:
+        is_always_run: true
+  gen2-4_core-xcode13.0:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-13.0.x
+        machine_type_id: g2.4core
+    envs:
+    - opts:
+        is_expand: false
+      DEPLOYMENT_TARGET: '15.0' 
+  gen2-4_core-xcode12.5:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-12.5.x
+        machine_type_id: g2.4core
+    envs:
+    - opts:
+        is_expand: false
+      DEPLOYMENT_TARGET: '14.5' 
+  gen2-8_core-xcode13.0:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-13.0.x
+        machine_type_id: g2.8core
+    envs:
+    - opts:
+        is_expand: false
+      DEPLOYMENT_TARGET: '15.0' 
+  gen2-8_core-xcode12.5:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-12.5.x
+        machine_type_id: g2.8core
+    envs:
+    - opts:
+        is_expand: false
+      DEPLOYMENT_TARGET: '14.5' 
+  gen2-12_core-xcode13.0:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-13.0.x
+        machine_type_id: g2.12core
+    envs:
+    - opts:
+        is_expand: false
+      DEPLOYMENT_TARGET: '15.0' 
+  gen2-12_core-xcode12.5:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-12.5.x
+        machine_type_id: g2.12core
+    envs:
+    - opts:
+        is_expand: false
+      DEPLOYMENT_TARGET: '14.5' 
 app:
   envs:
   - opts:
@@ -30,4 +97,3 @@ meta:
     bitrise.io:
     stack: osx-xcode-12.5.x
     machine_type_id: g2.8core
-
