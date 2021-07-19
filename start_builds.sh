@@ -11,6 +11,6 @@ workflow_names=("gen2-4_core-xcode13.0" "gen2-4_core-xcode12.5" "gen2-4_core-xco
 for i in "${workflow_names[@]}";
 do
 echo $i
-curl https://app.bitrise.io/app/${BITRISE_APP_SLUG}/build/start.json --data "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"${BUILD_TRIGGER_TOKEN}\"},\"build_params\":{\"branch\":\"many_ui_tests\",\"workflow_id\":\"${i}\" },\"triggered_by\":\"curl\"}"
-sleep 30
+curl https://app.bitrise.io/app/${BITRISE_APP_SLUG}/build/start.json --data "{\"hook_info\":{\"type\":\"bitrise\",\"build_trigger_token\":\"${BUILD_TRIGGER_TOKEN}\"},\"build_params\":{\"branch\":\"sim_stability\",\"workflow_id\":\"${i}\" },\"triggered_by\":\"curl\"}"
+sleep 45
 done
