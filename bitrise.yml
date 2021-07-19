@@ -11,8 +11,8 @@ workflows:
     - xcode-test@2:
         inputs:
         - headless_mode: 'no'
-        - xcodebuild_test_options: '-parallel-testing-enabled'
-        - simulator_os_version: '14.5'
+        - xcodebuild_test_options: '-parallel-testing-enabled YES'
+        - simulator_os_version: '$SIMULATOR_OS_VERSION'
         - output_tool: xcodebuild
     - deploy-to-bitrise-io@1:
         is_always_run: true
@@ -26,7 +26,7 @@ workflows:
     envs:
     - opts:
         is_expand: false
-      DEPLOYMENT_TARGET: '15.0' 
+      SIMULATOR_OS_VERSION: '15.0' 
   gen2-4_core-xcode12.5:
     after_run:
     - primary
@@ -37,7 +37,7 @@ workflows:
     envs:
     - opts:
         is_expand: false
-      DEPLOYMENT_TARGET: '14.5' 
+      SIMULATOR_OS_VERSION: '14.5' 
   gen2-8_core-xcode13.0:
     after_run:
     - primary
@@ -48,7 +48,7 @@ workflows:
     envs:
     - opts:
         is_expand: false
-      DEPLOYMENT_TARGET: '15.0' 
+      SIMULATOR_OS_VERSION: '15.0' 
   gen2-8_core-xcode12.5:
     after_run:
     - primary
@@ -59,7 +59,7 @@ workflows:
     envs:
     - opts:
         is_expand: false
-      DEPLOYMENT_TARGET: '14.5' 
+      SIMULATOR_OS_VERSION: '14.5' 
   gen2-12_core-xcode13.0:
     after_run:
     - primary
@@ -70,7 +70,7 @@ workflows:
     envs:
     - opts:
         is_expand: false
-      DEPLOYMENT_TARGET: '15.0' 
+      SIMULATOR_OS_VERSION: '15.0' 
   gen2-12_core-xcode12.5:
     after_run:
     - primary
@@ -81,7 +81,7 @@ workflows:
     envs:
     - opts:
         is_expand: false
-      DEPLOYMENT_TARGET: '14.5' 
+      SIMULATOR_OS_VERSION: '14.5' 
 app:
   envs:
   - opts:
