@@ -26,3 +26,8 @@ app:
   - opts:
       is_expand: false
     BITRISE_EXPORT_METHOD: development
+meta:
+    bitrise.io:
+    stack: osx-xcode-12.5.x
+    machine_type_id: g2.8core
+
