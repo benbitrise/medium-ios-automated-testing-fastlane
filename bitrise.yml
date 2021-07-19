@@ -11,7 +11,7 @@ workflows:
     - xcode-test@2:
         inputs:
         - headless_mode: 'no'
-        - xcodebuild_test_options: '"-parallel-testing-enabled" "YES"'
+        - xcodebuild_test_options: '"-parallel-testing-enabled" "YES" "-parallel-testing-worker-count" "6"'
         - simulator_os_version: '$SIMULATOR_OS_VERSION'
         - output_tool: xcodebuild
     - deploy-to-bitrise-io@1:
