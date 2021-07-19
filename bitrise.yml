@@ -22,7 +22,9 @@ workflows:
         inputs:
         - content: >-
             #!/usr/bin/env bash
+
             set -ex
+            
             /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f "$(xcode-select --print-path)/Applications/Simulator.app"
     - xcode-test@2:
         inputs:
