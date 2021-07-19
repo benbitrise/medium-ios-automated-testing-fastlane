@@ -70,7 +70,7 @@ workflows:
     envs:
     - opts:
         is_expand: false
-      SIMULATOR_OS_VERSION: '14.5'
+      SIMULATOR_OS_VERSION: '14.2'
   gen2-4_core-xcode12.1:
     after_run:
     - primary
@@ -81,7 +81,7 @@ workflows:
     envs:
     - opts:
         is_expand: false
-      SIMULATOR_OS_VERSION: '14.4' 
+      SIMULATOR_OS_VERSION: '14.1' 
   gen2-4_core-xcode12.0:
     after_run:
     - primary
@@ -92,7 +92,7 @@ workflows:
     envs:
     - opts:
         is_expand: false
-      SIMULATOR_OS_VERSION: '14.3'
+      SIMULATOR_OS_VERSION: '14.0'
 app:
   envs:
   - opts:
