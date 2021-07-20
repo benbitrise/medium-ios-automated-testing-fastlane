@@ -199,7 +199,7 @@ workflows:
     - opts:
         is_expand: false
       SIMULATOR_OS_VERSION: '14.0'
-    gen2-8_core-xcode11.7:
+  gen2-8_core-xcode11.7:
     after_run:
     - primary
     meta:
