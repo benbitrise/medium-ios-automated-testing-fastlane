@@ -111,6 +111,17 @@ workflows:
     - opts:
         is_expand: false
       SIMULATOR_OS_VERSION: '14.0'
+  gen2-4_core-xcode11.7:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-11.7.x
+        machine_type_id: g2.4core
+    envs:
+    - opts:
+        is_expand: false
+      SIMULATOR_OS_VERSION: '13.7'
   gen2-8_core-xcode13.0:
     after_run:
     - primary
