@@ -199,6 +199,17 @@ workflows:
     - opts:
         is_expand: false
       SIMULATOR_OS_VERSION: '14.0'
+    gen2-8_core-xcode11.7:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-11.7.x
+        machine_type_id: g2.8core
+    envs:
+    - opts:
+        is_expand: false
+      SIMULATOR_OS_VERSION: '13.7'
   gen2-12_core-xcode13.0:
     after_run:
     - primary
@@ -276,6 +287,17 @@ workflows:
     - opts:
         is_expand: false
       SIMULATOR_OS_VERSION: '14.0'
+  gen2-12_core-xcode11.7:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-11.7.x
+        machine_type_id: g2.12core
+    envs:
+    - opts:
+        is_expand: false
+      SIMULATOR_OS_VERSION: '13.7'
   gen1-elite-xcode13.0:
     after_run:
     - primary
@@ -353,6 +375,17 @@ workflows:
     - opts:
         is_expand: false
       SIMULATOR_OS_VERSION: '14.0'
+  gen1-elite-xcode11.7:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-11.7.x
+        machine_type_id: elite
+    envs:
+    - opts:
+        is_expand: false
+      SIMULATOR_OS_VERSION: '13.7'
   gen1-standard-xcode13.0:
     after_run:
     - primary
@@ -430,6 +463,17 @@ workflows:
     - opts:
         is_expand: false
       SIMULATOR_OS_VERSION: '14.0'
+  gen1-standard-xcode11.7:
+    after_run:
+    - primary
+    meta:
+      bitrise.io:
+        stack: osx-xcode-11.7.x
+        machine_type_id: standard
+    envs:
+    - opts:
+        is_expand: false
+      SIMULATOR_OS_VERSION: '13.7'
 app:
   envs:
   - opts:
