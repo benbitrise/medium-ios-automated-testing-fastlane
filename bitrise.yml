@@ -18,14 +18,6 @@ workflows:
     steps:
     - activate-ssh-key@4: {}
     - git-clone@6: {}
-    - script@1:
-        inputs:
-        - content: >-
-            #!/usr/bin/env bash
-
-            set -ex
-            
-            /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f "$(xcode-select --print-path)/Applications/Simulator.app"
     - xcode-test@2:
         inputs:
         - headless_mode: 'no'
